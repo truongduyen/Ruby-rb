@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: duyen
+  host: localhost  
+  port: 5432
+
+development:
+  <<: *default
+  database: Ruby
+
+test:
+  <<: *default
+  database: example_rails_test
+
+production:
+  <<: *default
+  database: example_rails_production
